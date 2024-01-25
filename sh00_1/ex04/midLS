@@ -1,0 +1,5 @@
+# longer
+ls -Atpr | grep -v '^\.' | awk '{printf "%s, ", $0} END {print ""}'
+
+#shorter
+ls -m -t -p
