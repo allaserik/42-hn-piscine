@@ -6,7 +6,7 @@
 /*   By: eallas <eallas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 10:51:09 by eallas            #+#    #+#             */
-/*   Updated: 2024/01/23 11:29:42 by eallas           ###   ########.fr       */
+/*   Updated: 2024/01/24 15:46:26 by eallas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,10 @@ void	ft_print_comb(void)
 	char	third_digit;
 
 	first_digit = '0';
-	while (first_digit <= '9')
+	while (first_digit <= '7')
 	{
 		second_digit = first_digit + 1;
-		while (second_digit <= '9')
+		while (second_digit <= '8')
 		{
 			third_digit = second_digit + 1;
 			while (third_digit <= '9')

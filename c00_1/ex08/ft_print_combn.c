@@ -6,7 +6,7 @@
 /*   By: eallas <eallas@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 13:16:30 by eallas            #+#    #+#             */
-/*   Updated: 2024/01/23 15:33:43 by eallas           ###   ########.fr       */
+/*   Updated: 2024/01/24 15:49:22 by eallas           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,15 +86,15 @@ void	ft_print_combn(int n)
 /**
  * Main function for testing.
  */
-// int	main(void)
-// {
-// 	write(1, "Start test: \n", 13);
-// 	ft_print_combn(2);
-// 	write(1, "\n", 1);
-// 	ft_print_combn(3);
-// 	write(1, "\n", 1);
-// 	ft_print_combn(5);
-// 	write(1, "\n", 1);
-// 	write(1, "End test.\n", 10);
-// 	return (0);
-// }
+int	main(void)
+{
+	write(1, "Start test: \n", 13);
+	// ft_print_combn(2);
+	// write(1, "\n", 1);
+	// ft_print_combn(3);
+	// write(1, "\n", 1);
+	ft_print_combn(9);
+	write(1, "\n", 1);
+	write(1, "End test.\n", 10);
+	return (0);
+}
