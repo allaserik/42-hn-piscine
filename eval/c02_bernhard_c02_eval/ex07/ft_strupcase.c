@@ -1,0 +1,37 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: beschrod <beschrod@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/21 16:59:17 by beschrod          #+#    #+#             */
+/*   Updated: 2024/01/22 11:08:42 by beschrod         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+// #include <stdio.h>
+
+char	*ft_strupcase(char *str)
+{
+	int	index;
+
+	index = 0;
+	while (str[index] != 0)
+	{
+		if (str[index] >= 'a' && str[index] <= 'z')
+		{
+			str[index] = str[index] - 32;
+		}
+		++index;
+	}
+	return (str);
+}
+
+// int	main(void)
+// {
+//     char test[] = {'a', 'b', 'c', '1', 's', 'D', 'H', '-', 0};
+// 	ft_strupcase(test);
+
+//     printf("%s", test);
+// }

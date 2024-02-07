@@ -1,0 +1,117 @@
+#Rush02 assignment
+Turn-in directory : ex00/
+Files to turn in : Makefile and all the necessary files
+Allowed functions : write, malloc, free, open, read, close
+• Create a program that takes a number as argument and converts it to its written
+letters value.
+• Executable name: rush-02
+• Your source code will be compiled as follows :
+make fclean
+make
+• Your program can take up to 2 arguments:
+◦ If there is only one argument, it is the value you need to convert
+◦ If there are two arguments, the first argument is the new reference dictionary
+and the second argument is the value you need to convert.
+• If the argument isn’t a positive number, your program must return "Error", followed
+by a newline.
+Your program should go beyond unsigned int.
+4
+C Piscine Rush 02
+• Your program must parse the dictionary given as resource to the project. The
+values inside it must be used to print the result. These values can be modified.
+• Any memory allocated on the heap (with malloc(3)) must be freed correctly. This
+will be verified during evaluation.
+• The dictionary will have the following rules:
+[a number][0 to n spaces]:[0 to n spaces][any printable characters]\n
+◦ Numbers are to be handled the same way atoi handles them.
+◦ You will trim the spaces before and after the value in the dictionary.
+◦ The dictionary will always have at least the keys as in the reference dictionary.
+Their value can be modified, more entries can be added, but the initial keys
+can’t be removed.
+◦ You only need to use the initial entries (For instance, if we add 54: fifty-four,
+you still have to use 50: fifty and 4: four)
+◦ The entries of the dictionary can be stored in any order.
+◦ There can be empty lines in the dictionary.
+◦ If you have any errors from the dictionary parsing, your program must output
+"Dict Error\n"
+◦ If the dictionary doesn’t allow you to resolve the asked value, your program
+must output "Dict Error\n".
+• Example:
+$> ./rush-02 42 | cat -e
+forty two$
+$> ./rush-02 0 | cat -e
+zero$
+$> ./rush-02 10.4 | cat -e
+Error$
+$> ./rush-02 100000 | cat -e
+one hundred thousand$
+$> grep "20" numbers.dict | cat -e
+20 : hey everybody !$
+$> ./rush-02 20 | cat -e
+hey everybody !$
+
+#Solution Step-by-Step Plan:
+#1 Parsing Command-Line Arguments:
+
+Check the number of command-line arguments.
+If there's only one argument, it's the number you need to convert.
+If there are two arguments, the first is the reference dictionary, and the second is the number to convert.
+
+#2 Error Handling for Invalid Numbers:
+
+Check if the provided number is positive.
+If not, print "Error" and return.
+
+#3 Reading and Parsing the Dictionary:
+
+Open the reference dictionary file.
+Read its content and parse it according to the specified format.
+Each line should have the format: 
+[number][0 to n spaces]:[0 to n spaces][any printable characters]\n
+Trim spaces before and after the value.
+Store the parsed dictionary entries.
+
+#4 Converting the Number:
+
+Convert the given number to its written letters value.
+Use the parsed dictionary entries to get the corresponding words for each part of the number.
+
+#5 Output:
+
+Print the result to the standard output.
+If there are any errors during parsing or conversion, print "Dict Error\n" or appropriate error messages.
+
+#6 Memory Management:
+
+Free any memory allocated on the heap (e.g., for storing the dictionary entries).
+
+#7 Makefile:
+
+Create a Makefile with the following targets:
+all: Compiles your program.
+clean: Removes object files.
+fclean: Removes object files and the executable.
+re: Rebuilds your program.
+
+#8 Testing:
+
+Test your program with the provided examples:
+
+$> ./rush-02 42 | cat -e
+forty two$
+$> ./rush-02 0 | cat -e
+zero$
+$> ./rush-02 10.4 | cat -e
+Error$
+$> ./rush-02 100000 | cat -e
+one hundred thousand$
+$> grep "20" numbers.dict | cat -e
+20 : hey everybody !$
+$> ./rush-02 20 | cat -e
+hey everybody !$
+Additional Testing:
+
+Test with various input values to ensure the correctness of your conversion.
+Submission:
+
+Submit the required files (Makefile and other necessary files).
