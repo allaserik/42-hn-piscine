@@ -1,0 +1,8 @@
+directory:				code/ex02
+files to hand in:		ex02.c
+allowed functions:		write
+
+Create a function that displays an integer it receives 
+followed by a newline.
+
+void	putint(int num);

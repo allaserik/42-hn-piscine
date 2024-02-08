@@ -1,0 +1,7 @@
+directory:				code/ex00
+files to hand in:		ex00.c
+allowed functions:		write
+
+Create a function that displays a character it receives followed by a newline.
+
+void	put_char(char c);

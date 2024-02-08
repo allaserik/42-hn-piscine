@@ -1,0 +1,7 @@
+directory:				code/ex03
+files to hand in:		ex03.c
+allowed functions:		write
+
+Create a function that takes a string and displays it in reverse followed by a newline.
+
+void	reverse_print(char *str);

@@ -1,0 +1,9 @@
+directory:				code/ex01
+files to hand in:		ex01.c
+allowed functions:		write
+
+Write a function that checks if a given string is alphanumeric.
+It should print a 1 followed by a newline if yes and a 0 with
+a newline if not. Empty strings should print 1 with a new line.
+
+void	check_an(char *str);

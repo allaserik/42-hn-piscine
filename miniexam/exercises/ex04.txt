@@ -1,0 +1,11 @@
+directory:				code/ex04
+files to hand in:		ex04.c
+allowed functions:		none
+
+Create a function that takes an int and returns the square root of it.
+If the square root is not rational round down to the next int and
+return this.
+
+For values < 0 return 0.
+
+int	ft_sqrt(int n);
